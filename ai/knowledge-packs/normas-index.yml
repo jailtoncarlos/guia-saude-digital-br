@@ -309,3 +309,44 @@ normas:
       internacional complementar a SBIS NGS1.02.
     arquivo_ficha: "docs/normas/sbis-cfm/README.md"
     tags: [nist, autenticacao]
+
+  # ------------------------------------------------------------------- #
+  # Governo digital e saúde digital (adicionadas no ciclo atual)
+  # ------------------------------------------------------------------- #
+
+  - id: lei-14129-2021
+    title: "Lei nº 14.129/2021 — Lei de Governo Digital"
+    type: lei
+    year: 2021
+    number: "14.129/2021"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm"
+    escopo_saude_digital: >
+      Princípios do Governo Digital, identidade civil digital (Art. 17),
+      interoperabilidade (Art. 18), serviços digitais (Art. 26). Aplicável
+      a sistemas municipais de saúde.
+    arquivo_ficha: "docs/normas/apf-seguranca/lei-14129-2021.md"
+    tags: [governo-digital, identidade, interoperabilidade]
+
+  - id: portaria-940-2011-cns
+    title: "Portaria GM/MS nº 940/2011 — Cartão Nacional de Saúde"
+    type: portaria
+    year: 2011
+    number: "940/2011"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt0940_28_04_2011.html"
+    escopo_saude_digital: >
+      CNS como identificador unívoco do usuário do SUS. Obrigatório em
+      todo sistema de informação em saúde. Coexiste com CPF.
+    arquivo_ficha: "docs/normas/ms-datasus/portaria-940-2011-cns.md"
+    tags: [cns, identidade, sus]
+
+  - id: portaria-2073-2011
+    title: "Portaria MS/GM nº 2.073/2011 — Padrões de Interoperabilidade"
+    type: portaria
+    year: 2011
+    number: "2.073/2011"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt2073_31_08_2011.html"
+    escopo_saude_digital: >
+      Padrões abertos em saúde (CID, TUSS, HL7, DICOM). CPF e CNS como
+      identificadores válidos. Base técnica da interoperabilidade no SUS.
+    arquivo_ficha: "docs/normas/ms-datasus/portaria-2073-2011.md"
+    tags: [interoperabilidade, padroes, hl7, dicom, cns]
