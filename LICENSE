@@ -1,0 +1,40 @@
+# Licenciamento dual
+
+Este repositório adota licenciamento **dual** para separar código-exemplo de
+conteúdo editorial:
+
+## Código
+
+Aplica-se a:
+- `examples/`
+- `templates/`
+- `ai/knowledge-packs/`
+- Qualquer script utilitário do repositório
+
+**Licença:** Apache License, Version 2.0
+
+Texto completo em [`LICENSE-CODE`](./LICENSE-CODE) ou em
+<https://www.apache.org/licenses/LICENSE-2.0>.
+
+## Conteúdo editorial
+
+Aplica-se a todos os demais arquivos do repositório (em especial `docs/`,
+`README.md`, `CONTRIBUTING.md`, `ai/system-prompts/`).
+
+**Licença:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Texto completo em [`LICENSE-CONTENT`](./LICENSE-CONTENT) ou em
+<https://creativecommons.org/licenses/by/4.0/legalcode>.
+
+## Atribuição sugerida
+
+Ao reutilizar conteúdo editorial, sugerimos:
+
+> Adaptado de "guia-saude-digital-br" (Jailton Carlos et al.), licenciado sob
+> CC BY 4.0. Fonte: https://github.com/jailtoncarlos/guia-saude-digital-br
+
+## Sem assessoria jurídica
+
+Este guia é material técnico de apoio a desenvolvedores. Não substitui análise
+jurídica de um advogado ou do DPO da instituição. Para decisões de
+conformidade, consulte profissional habilitado.
