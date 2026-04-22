@@ -4,8 +4,10 @@ Guia aberto e prático de conformidade para desenvolvimento de **sistemas de
 saúde digital no Brasil**. Autoridade curada, não enciclopédia: cada norma
 vira uma ficha focada em *como aplicar em código*.
 
-> **Status:** MVP em construção. Conteúdo em revisão contínua. Contribuições
-> são bem-vindas — veja [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+> **Status:** MVP entregue (abril/2026). Conteúdo em revisão contínua.
+> 22 normas catalogadas, 7 cenários operacionais, 4 checklists,
+> template Django completo. Contribuições são bem-vindas — veja
+> [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## Para quem é este guia
 
@@ -106,6 +108,29 @@ Detalhes em [`LICENSE`](./LICENSE).
 
 Veja [`CONTRIBUTING.md`](./CONTRIBUTING.md) e
 [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+
+## Roadmap (pós-MVP)
+
+Contribuições priorizadas:
+
+- **CI de validação de links** — workflow `lychee` ou `markdown-link-check`
+  em `docs/**.md`.
+- **Ficha completa do Decreto 10.046/2019** (hoje resumo no índice
+  APF/Segurança).
+- **Implementação do stub `flask-auth-lgpd-compliant`** — equivalente
+  Flask do template Django.
+- **Implementação do stub `dash-audit-trail-minimal`** — dashboard Plotly
+  Dash com trilha desde o primeiro request.
+- **Cenário "integração FHIR / HL7 v2"** para sistemas analíticos que
+  consomem RNDS.
+- **Cenário "laudo digital assinado (ICP-Brasil)"** — escopo NGS2,
+  fora do recorte atual.
+- **Script de validação** que varre `docs/normas/` e gera
+  automaticamente `ai/knowledge-packs/normas-index.yml`.
+- **Templates adicionais** — `rotinas-dpo.md.tpl`,
+  `runbook-incidente-lgpd.md.tpl`.
+
+Issues com rótulo `good-first-issue` serão criadas para cada item.
 
 ## Autor
 
