@@ -1,0 +1,14 @@
+# Dependencias minimas para o template de referencia.
+# Versoes com piso; em producao, fixar a versao exata no lockfile
+# (uv.lock / poetry.lock) e atualizar via Dependabot/Renovate.
+
+Django>=5.0,<6.0
+
+# Rate limit (SBIS NGS1.02.13). Alternativa: django-axes.
+django-ratelimit>=4.1
+
+# Carregamento de variaveis de ambiente (segredos fora do VCS).
+python-dotenv>=1.0
+
+# Postgres em producao (recomendado para sistema de saude).
+psycopg[binary]>=3.1
