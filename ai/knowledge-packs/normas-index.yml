@@ -1,0 +1,311 @@
+# Índice de normas do guia-saude-digital-br
+#
+# Formato YAML estável para consumo por LLM via retrieval / knowledge pack.
+# Cada entrada tem: id, title, type, year, url_oficial, escopo_saude_digital,
+# arquivo_ficha (path relativo à raiz do repositório).
+#
+# Quando uma norma for republicada, crie NOVA entrada com id sufixado (ex.:
+# "cns-738-2024" -> "cns-738-2025" após republicação), mantendo a anterior
+# para rastreabilidade histórica.
+
+schema_version: 1
+generated_by: guia-saude-digital-br
+generated_at: "2026-04-22"
+
+normas:
+  # ------------------------------------------------------------------- #
+  # Legislação base
+  # ------------------------------------------------------------------- #
+
+  - id: lgpd-13709-2018
+    title: "Lei Geral de Proteção de Dados Pessoais"
+    type: lei
+    year: 2018
+    number: "13.709/2018"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+    escopo_saude_digital: >
+      Base geral para tratamento de dado pessoal sensível de saúde.
+      Arts. 5º II (definição de sensível), 6º (princípios), 7º/8º/11 (bases
+      legais), 15 (término), 18 (direitos), 46 (segurança), 48 (incidente).
+    arquivo_ficha: "docs/normas/lgpd/README.md"
+    tags: [lgpd, dado-sensivel, seguranca, auditoria]
+
+  - id: marco-civil-12965-2014
+    title: "Marco Civil da Internet"
+    type: lei
+    year: 2014
+    number: "12.965/2014"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
+    escopo_saude_digital: >
+      Art. 15 — guarda obrigatória de registros de acesso a aplicações
+      (mínimo 6 meses) em ambiente controlado e de segurança.
+    arquivo_ficha: "docs/normas/marco-civil/README.md"
+    tags: [marco-civil, trilha, logs]
+
+  - id: decreto-10046-2019
+    title: "Decreto 10.046/2019 — Governança de compartilhamento de dados na APF"
+    type: decreto
+    year: 2019
+    number: "10.046/2019"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d10046.htm"
+    escopo_saude_digital: >
+      Governança e rastreabilidade no compartilhamento de dados pela APF.
+      Conexão com RNDS e Cadastro Base do Cidadão.
+    arquivo_ficha: "docs/normas/apf-seguranca/README.md"
+    tags: [apf, compartilhamento, rastreabilidade]
+
+  # ------------------------------------------------------------------- #
+  # Segurança da informação na APF
+  # ------------------------------------------------------------------- #
+
+  - id: pnsi-9637-2018
+    title: "Política Nacional de Segurança da Informação (PNSI)"
+    type: decreto
+    year: 2018
+    number: "9.637/2018"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9637.htm"
+    escopo_saude_digital: >
+      Princípios CIAAR (confidencialidade, integridade, disponibilidade,
+      autenticidade, responsabilização) aplicáveis a sistemas da APF.
+    arquivo_ficha: "docs/normas/apf-seguranca/pnsi-9637-2018.md"
+    tags: [pnsi, apf, seguranca]
+
+  - id: in-gsi-1-2020
+    title: "IN GSI/PR nº 1/2020 — Estrutura mínima para SI na APF"
+    type: instrucao_normativa
+    year: 2020
+    number: "IN GSI/PR 1/2020"
+    url_oficial: "https://www.gov.br/gsi/pt-br/composicao/SSIC/dsic/legislacao"
+    escopo_saude_digital: >
+      Controles mínimos: autenticação individual, RBAC, logs,
+      sincronização de tempo, criptografia, resposta a incidente.
+    arquivo_ficha: "docs/normas/apf-seguranca/in-gsi-1-2020.md"
+    tags: [in-gsi, apf, seguranca]
+
+  # ------------------------------------------------------------------- #
+  # ANPD
+  # ------------------------------------------------------------------- #
+
+  - id: anpd-res-30-2025
+    title: "Resolução CD/ANPD nº 30/2025 — Mapa de Temas Prioritários 2026–2027"
+    type: resolucao
+    year: 2025
+    number: "Res. CD/ANPD 30/2025"
+    url_oficial: "https://www.gov.br/anpd/pt-br"
+    escopo_saude_digital: >
+      Define como prioridades de fiscalização 2026–2027 dado de saúde,
+      SUS, transferência internacional e incidentes.
+    arquivo_ficha: "docs/normas/anpd/resolucao-30-2025.md"
+    tags: [anpd, prioridades, fiscalizacao]
+
+  - id: anpd-res-19-2024
+    title: "Resolução CD/ANPD nº 19/2024 — Transferência Internacional"
+    type: resolucao
+    year: 2024
+    number: "Res. CD/ANPD 19/2024"
+    url_oficial: "https://www.gov.br/anpd/pt-br"
+    escopo_saude_digital: >
+      Regulamento de transferência internacional. Cláusulas-Padrão
+      Contratuais e alternativas previstas nos Arts. 33–36 da LGPD.
+    arquivo_ficha: "docs/normas/anpd/resolucao-19-2024.md"
+    tags: [anpd, transferencia-internacional, cloud]
+
+  - id: anpd-guia-poder-publico-2024
+    title: "Guia Orientativo ANPD — Tratamento de Dados pelo Poder Público (2024)"
+    type: guia
+    year: 2024
+    number: "Guia ANPD 2024"
+    url_oficial: "https://www.gov.br/anpd/pt-br/documentos-e-publicacoes"
+    escopo_saude_digital: >
+      Bases legais em órgão público, direitos do titular, RIPD, incidentes.
+      Material prático para sistemas SUS.
+    arquivo_ficha: "docs/normas/anpd/guia-poder-publico-2024.md"
+    tags: [anpd, poder-publico, sus]
+
+  # ------------------------------------------------------------------- #
+  # MS / DATASUS
+  # ------------------------------------------------------------------- #
+
+  - id: pniis-589-2015
+    title: "PNIIS — Portaria GM/MS 589/2015"
+    type: portaria
+    year: 2015
+    number: "Portaria GM/MS 589/2015"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2015/prt0589_20_05_2015.html"
+    escopo_saude_digital: >
+      Política Nacional de Informação e Informática em Saúde.
+      Princípio de identificação unívoca do usuário do SUS (CPF).
+    arquivo_ficha: "docs/normas/ms-datasus/pniis-589-2015.md"
+    tags: [pniis, cpf, sus, identificacao]
+
+  - id: portaria-2073-2011
+    title: "Portaria MS/GM 2.073/2011 — Padrões de interoperabilidade"
+    type: portaria
+    year: 2011
+    number: "Portaria MS/GM 2.073/2011"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt2073_31_08_2011.html"
+    escopo_saude_digital: >
+      Estabelece padrões de interoperabilidade e uso de CPF/CNS como
+      identificadores de paciente.
+    arquivo_ficha: "docs/normas/ms-datasus/pniis-589-2015.md"
+    tags: [interoperabilidade, cpf, cns]
+
+  - id: esd28-1434-2020
+    title: "ESD28 — Estratégia de Saúde Digital 2020–2028"
+    type: portaria
+    year: 2020
+    number: "Portaria GM/MS 1.434/2020"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2020/prt1434_02_06_2020.html"
+    escopo_saude_digital: >
+      Estratégia decenal: conectividade, RES unificado, FHIR, CPF,
+      governança federada.
+    arquivo_ficha: "docs/normas/ms-datasus/esd28-1434-2020.md"
+    tags: [esd28, estrategia, fhir]
+
+  - id: sus-digital-3232-2024
+    title: "Programa SUS Digital — Portaria GM/MS 3.232/2024"
+    type: portaria
+    year: 2024
+    number: "Portaria GM/MS 3.232/2024"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/"
+    escopo_saude_digital: >
+      3 eixos: cultura digital, soluções digitais, interoperabilidade.
+      Consolida ESD28 em programa operacional.
+    arquivo_ficha: "docs/normas/ms-datasus/sus-digital-3232-2024.md"
+    tags: [sus-digital, programa]
+
+  - id: rnds-12560-2025
+    title: "RNDS — Decreto 12.560/2025"
+    type: decreto
+    year: 2025
+    number: "Decreto 12.560/2025"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/"
+    escopo_saude_digital: >
+      Rede Nacional de Dados em Saúde. Plataformas SUS Digital.
+      Modelo federado com rastreabilidade ponta a ponta.
+    arquivo_ficha: "docs/normas/ms-datasus/rnds-12560-2025.md"
+    tags: [rnds, interoperabilidade, fhir]
+
+  - id: cloud-ms-7678-2025
+    title: "Estratégia de Cloud do MS — Portaria 7.678/2025"
+    type: portaria
+    year: 2025
+    number: "Portaria GM/MS 7.678/2025"
+    url_oficial: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2025/"
+    escopo_saude_digital: >
+      Diretrizes para uso de IaaS/PaaS/SaaS em sistemas do MS.
+      Soberania, segurança mínima, continuidade.
+    arquivo_ficha: "docs/normas/ms-datasus/cloud-7678-2025.md"
+    tags: [cloud, soberania, ms]
+
+  - id: posic-ms
+    title: "POSIC/MS — Política de SI e Comunicações do MS"
+    type: politica_interna
+    year: null
+    number: "POSIC/MS"
+    url_oficial: null
+    escopo_saude_digital: >
+      Aplica PNSI e IN GSI/PR no contexto MS: classificação,
+      menor privilégio, gestão de credenciais, incidente, homologação,
+      backup, SAST/DAST no CI.
+    arquivo_ficha: "docs/normas/ms-datasus/posic-ms.md"
+    tags: [posic, ms, seguranca]
+
+  # ------------------------------------------------------------------- #
+  # SBIS / CFM
+  # ------------------------------------------------------------------- #
+
+  - id: sbis-ngs1-estagio1-v5-2
+    title: "SBIS/CFM — Manual de Certificação S-RES, NGS1 Estágio 1 (v5.2)"
+    type: manual
+    year: 2021
+    number: "Requisitos v5.2 (10/11/2021)"
+    url_oficial: "https://sbis.org.br/certificacao/"
+    escopo_saude_digital: >
+      Requisitos essenciais: NGS1.01 versão, NGS1.02 autenticação,
+      NGS1.03 autorização, NGS1.04 disponibilidade, NGS1.05 comunicação,
+      NGS1.06 dados, NGS1.07 auditoria, NGS1.08 documentação, NGS1.09
+      tempo, NGS1.11 privacidade, NGS1.12 integridade.
+    arquivo_ficha: "docs/normas/sbis-cfm/README.md"
+    tags: [sbis, certificacao, ngs1]
+
+  # ------------------------------------------------------------------- #
+  # Pesquisa
+  # ------------------------------------------------------------------- #
+
+  - id: lei-14874-2024
+    title: "Nova Lei da Pesquisa com Seres Humanos"
+    type: lei
+    year: 2024
+    number: "Lei 14.874/2024"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14874.htm"
+    escopo_saude_digital: >
+      Substitui Res. CNS 466/2012 em lei formal. Cria a Inaep (sucessora
+      da CONEP). TCLE, uso secundário, retenção.
+    arquivo_ficha: "docs/normas/pesquisa-inaep/lei-14874-2024.md"
+    tags: [pesquisa, inaep, tcle]
+
+  - id: decreto-12651-2025
+    title: "Decreto 12.651/2025 — Regulamenta a Lei 14.874/2024"
+    type: decreto
+    year: 2025
+    number: "Decreto 12.651/2025"
+    url_oficial: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/"
+    escopo_saude_digital: >
+      Regulamento da Lei 14.874/2024 que detalha estrutura e
+      funcionamento da Inaep e do sistema CEP.
+    arquivo_ficha: "docs/normas/pesquisa-inaep/lei-14874-2024.md"
+    tags: [pesquisa, inaep]
+
+  - id: cns-738-2024
+    title: "Resolução CNS 738/2024 — Bancos de dados em pesquisa"
+    type: resolucao
+    year: 2024
+    number: "Res. CNS 738/2024 (rep. 2025)"
+    url_oficial: "https://conselho.saude.gov.br/resolucoes-cns"
+    escopo_saude_digital: >
+      Rastreabilidade em transferências entre instituições, retenção
+      mínima de 5 anos, pseudonimização.
+    arquivo_ficha: "docs/normas/pesquisa-inaep/resolucao-cns-738-2024.md"
+    tags: [pesquisa, retencao, pseudonimizacao]
+
+  # ------------------------------------------------------------------- #
+  # Boas práticas técnicas (não-normativas mas amplamente referenciadas)
+  # ------------------------------------------------------------------- #
+
+  - id: owasp-top10-2021
+    title: "OWASP Top 10 (2021)"
+    type: padrao_tecnico
+    year: 2021
+    number: "OWASP Top 10 2021"
+    url_oficial: "https://owasp.org/Top10/"
+    escopo_saude_digital: >
+      A01 broken access control, A02 crypto failures, A04 insecure design,
+      A07 auth failures, A09 logging failures — conexões diretas com
+      LGPD Art. 46 e SBIS NGS1.
+    arquivo_ficha: "docs/checklists/owasp-top10-saude.md"
+    tags: [owasp, seguranca]
+
+  - id: owasp-asvs-v4
+    title: "OWASP ASVS v4"
+    type: padrao_tecnico
+    year: 2019
+    number: "OWASP ASVS 4.0"
+    url_oficial: "https://owasp.org/www-project-application-security-verification-standard/"
+    escopo_saude_digital: >
+      V2 autenticação, V4 controle de acesso, V7 logging, V11 lógica de
+      negócio — mapeamento direto para cenários deste guia.
+    arquivo_ficha: "docs/checklists/owasp-top10-saude.md"
+    tags: [owasp, asvs, verificacao]
+
+  - id: nist-sp-800-63
+    title: "NIST SP 800-63 — Digital Identity Guidelines"
+    type: padrao_tecnico
+    year: 2017
+    number: "NIST SP 800-63"
+    url_oficial: "https://pages.nist.gov/800-63-3/"
+    escopo_saude_digital: >
+      Níveis de garantia IAL/AAL/FAL para autenticação. Referência
+      internacional complementar a SBIS NGS1.02.
+    arquivo_ficha: "docs/normas/sbis-cfm/README.md"
+    tags: [nist, autenticacao]
